@@ -23,6 +23,8 @@ Additionally, a CSV file is provided that has 228 rows and two columns. The tabl
 	Dataset Link : 
 	<a href="https://www.kaggle.com/datasets/nafin59/monkeypox-skin-lesion-dataset"> Monkeypox Skin Lesion Dataset Kaggle </a>
 </p>
+
+Colab NoteBook Link : <a href="https://colab.research.google.com/drive/1dIhQoOmbPGIQhxP6pcFESs__0D4AMSaJ?usp=sharing">Click here</a><br>
 	
  <h2> Methodology </h2>
     
@@ -59,7 +61,9 @@ Here we build four models, one CNN and three pretrained models Resnet50V2, Mobil
 <li> Convolutional Neural Network </li><br>
 <p> 
 	A convolutional neural network (CNN or convnet) is a subset of machine learning. It is one of the various types of artificial neural networks which are used for different applications and data types. A CNN is a kind of network architecture for deep learning algorithms and is specifically used for image recognition and tasks that involve the processing of pixel data.
-There are other types of neural networks in deep learning, but for identifying and recognizing objects, CNNs are the network architecture of choice. This makes them highly suitable for computer vision (CV) tasks and for applications where object recognition is vital, such as self-driving cars and facial recognition. The Convolutional Layer and the Pooling Layer, together form the i-th layer of a Convolutional Neural Network. Depending on the complexities in the images, the number of such layers may be increased for capturing low-level details even further, but at the cost of more computational power.
+There are other types of neural networks in deep learning, but for identifying and recognizing objects, CNNs are the network architecture of choice. This makes them highly suitable for computer vision (CV) tasks and for applications where object recognition is vital, such as self-driving cars and facial recognition. The Convolutional Layer and the Pooling Layer, together form the i-th layer of a Convolutional Neural Network. Depending on the complexities in the images, the number of such layers may be increased for capturing low-level details even further, but at the cost of more computational power.<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/cnn%20model.png'>
+<br><br>
 </p>
 
 	
@@ -68,18 +72,27 @@ There are other types of neural networks in deep learning, but for identifying a
 	As the name applied, the MobileNet model is designed to be used in mobile applications, and it is TensorFlow’s first mobile computer vision model.
 MobileNet uses depth wise separable convolutions. It significantly reduces the number of parameters when compared to the network with regular convolutions with the same depth in the nets. This results in lightweight deep neural networks.
 MobileNet is a class of CNN that was open-sourced by Google, and therefore, this gives us an excellent starting point for training our classifiers that are insanely small and insanely fast. Dense-MobileNet introduces dense block idea into MobileNet. The convolution layers with the same size of input feature maps in MobileNet model are replaced as dense blocks, and the dense connections are carried out within the dense blocks. Dense blocks can make full use of the output feature maps of the previous convolution layers, generate more feature maps with fewer convolution kernels, and realize repeated use of features. By setting a small growth rate, the parameters and computations in MobileNet models are further reduced, so that the model can be better applied to mobile devices with low memory.
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/mobilenet%20model.png'>
+<br><br>
 </p>
 	
 <li> ResNet</li><br>
 <p>
 	ResNet stands for Residual Network. It is an innovative neural network that was first introduced by Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun in their 2015 computer vision research paper titled ‘Deep Residual Learning for Image Recognition’.
-ResNet has many variants that run on the same concept but have different numbers of layers. Resnet50 is used to denote the variant that can work with 50 neural network layers. Residual network architecture introduced “skip connections”. The main advantage of these models is the usage of residual layers as a building block that helps with gradient propagation during training. ResNet has many variants that run on the same concept but have different numbers of layers. Resnet50 is used to denote the variant that can work with 50 neural network layers. Resnet uses skip connections, These skip connections work in two ways. Firstly, they alleviate the issue of vanishing gradient by setting up an alternate shortcut for the gradient to pass through. In addition, they enable the model to learn an identity function. This ensures that the higher layers of the model do not perform any worse than the lower layers. In short, the residual blocks make it considerably easier for the layers to learn identity functions. As a result, ResNet improves the efficiency of deep neural networks with more neural layers while minimizing the percentage of errors. In other words, the skip connections add the outputs from previous layers to the outputs of stacked layers, making it possible to train much deeper networks than previously possible.  
+ResNet has many variants that run on the same concept but have different numbers of layers. Resnet50 is used to denote the variant that can work with 50 neural network layers. Residual network architecture introduced “skip connections”. The main advantage of these models is the usage of residual layers as a building block that helps with gradient propagation during training. ResNet has many variants that run on the same concept but have different numbers of layers. Resnet50 is used to denote the variant that can work with 50 neural network layers. Resnet uses skip connections, These skip connections work in two ways. Firstly, they alleviate the issue of vanishing gradient by setting up an alternate shortcut for the gradient to pass through. In addition, they enable the model to learn an identity function. This ensures that the higher layers of the model do not perform any worse than the lower layers. In short, the residual blocks make it considerably easier for the layers to learn identity functions. As a result, ResNet improves the efficiency of deep neural networks with more neural layers while minimizing the percentage of errors. In other words, the skip connections add the outputs from previous layers to the outputs of stacked layers, making it possible to train much deeper networks than previously possible. 
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/resnet%20model.png'>
+<br><br>
  </p>
 	
 <li> VGG-16</li><br>
 <p>
 	VGG-16 is a convolutional neural network that is 16 layers deep. You can load a pre-trained version of the network trained on more than a million images from the ImageNet database. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. As a result, the network has learned rich feature representations for a wide range of images. The network has an image input size of 224-by-224. For more pretrained networks in MATLAB, see Pre Trained Deep Neural Networks. You can use classify to classify new images using the VGG-16 network. The VGG model, or VGGNet, that supports 16 layers is also referred to as VGG16, which is a convolutional neural network model proposed by A. Zisserman and K. Simonyan from the University of Oxford.
 	The VGG network is constructed with very small convolutional filters. The VGG-16 consists of 13 convolutional layers and three fully connected layers. The number 16 in the name VGG refers to the fact that it is a 16 layers deep neural network (VGGnet). This means that VGG16 is a pretty extensive network and has a total of around 138 million parameters. Even according to modern standards, it is a huge network. However, VGGNet16 architecture’s simplicity is what makes the network more appealing. Just by looking at its architecture, it can be said that it is quite uniform. There are a few convolution layers followed by a pooling layer that reduces the height and the width. If we look at the number of filters that we can use, around 64 filters are available that we can double to about 128 and then to 256 filters. In the last layers, we can use 512 filters.
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/vgg16%20model.png'>
+<br><br>
 
 </p>
 	
@@ -92,21 +105,53 @@ ResNet has many variants that run on the same concept but have different numbers
 	
 * <h4> Model Training Phase</h4>
 <p>
+<br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/training%20phase.png'>
+<br>
 	The model training phase and the web application workflow are the two phases that make up this project's workflow. There are six steps in the training process. The first step is loading the dataset. Tensorflow library is used to load the monkeypox dataset from Kaggle into the Colab notebook. Image preprocessing is the second step in the training phase. In this step, numerous operations on the image are carried out, including histogram equalization, image standardization, and normalization. The model architecture is built in the third step of the training process, which is known as model building. In our study, we used four models: CNN, Resnet50V2, VGG16, and Resnet50V2. For each of these models, a model's architecture was designed.The model is assessed using test data in the fifth and final step of this process, which also involves calculating accuracy. Saving the Model is the last step in this process, where we save the model as an.h5 file. The .h5 file consists of parameters trained during the training phase of the model. The weights are saved in the .h5 file. The file is machine encoded. This saved model can also be utilized in a web application to make predictions about an image that has been provided.
 </p>
 	
 * <h4> Workflow of Web Application <h4>
 	
 <p>
+<br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/web%20application.png'>
+<br>
 		The first stage in a web application workflow is to access the test page, where the user must upload an image and make a prediction based on that image. On the test page, each model is shown, and the user may choose any of them. The uploading of an image is the next stage. The third stage is choosing a model from the available models and making a prediction based on the given image. The web application uses the.h5 files, where model parameters and weights are stored, to classify the image as monkeypox or non monkeypox is the final step. The model classifies the image and generates the results using those parameters.
 </p>
 	
 	
 
 <h3> Application Demo </h3>
-	
-	
-	
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/home%20page.png'>
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/test%20page.png'>
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/image%20upload%20test%20page.png'>
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/resnet%20model%20prediction.png'>
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/mobilenet%20model%20prediction.png'>
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/cnn%20model%20prediction.png'>
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/vgg%20model%20prediction.png'>
+<br><br>
+<img src='https://github.com/Sairam-04/Monkeypox-Classification/blob/main/Readme%20Images/summary%20page.png'>
+<br><br>
+
+<h2> Conclusion </h2>
+<p>
+	Main aim of this project is to identify monkeypox on skin with just a picture of the affected skin area. With advancements in AI and ML fields it has become easier to develop and deploy working models for real world applications. We have specifically developed a web application for monkeypox classification. In this web application we have used four models for classifying images of monkeypox vs. non-monkeypox Convolution Neural Network, Mobilenet, Resnet50V2 and VGG16. The Resnet50V2 model is performed better compared to all the models, Resnet50V2 has given accuracy of 98% on train data and 94% on test data which is the best accuracy among all the models. The loss for the Resnet50V2 model on train data is 0.05 and on test data is 0.08. The Resnet50V2 model performs better than the Convolution Neural network model, Mobilenet model and VGG16 model.
+</p>
+
+<h2> Future Scope </h2>
+<p>
+Since our project has a high degree of accuracy in determining if a skin sample contains monkeypox or not, we can put it online so that anybody who has questions may quickly submit photographs of their skin to determine whether they are infected with the virus or not.
+	In addition, we will classify other viruses and skin conditions that are similar to monkeypox, such as chickenpox, measles, pimples, etc., so that the public may immediately determine its kind and take the appropriate measures.
+</p>
+
+
 	
 	
 	
