@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resnet Model</title>
+    <link rel="stylesheet" href="../static/css/style1.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <img src="../static/readme_imgs/logo.jpg" class="logo" width="500" height="190">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/test">Test</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+
+            </ul>
+        </nav>
+        <div class="dept">
+            <p>Dept. of Artificial Intelligence</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h1 style="text-align: center;"> Resnet Model Prediction</h1>
+        <div class="box-1">
+            <div class="box-1-1">
+                <img class="border border-dark rounded" src="{{img_src}}" alt="image" style="width:620px; height:400px;">
+            </div>
+
+            <div class="box-1-2">
+                <br><br>
+                    <h2>Output :  {{result_resnet}} </h1>
+                    <h2>Train Accuracy : {{train_acc_r}}</h2>
+                    <h2>Test Accuracy : {{test_acc_r}}</h2>
+                    <h2>Train Loss : {{train_loss_r}}</h2>
+                    <h2>Test Loss : {{test_loss_r}}</h2>
+                    <h2> Probabilites : {{prob_resnet}}</h2>
+            </div>            
+        </div>
+        
+        <div class="box-2">
+            <img src="../static/Visualization/resnet1.png" alt="" srcset="" style="width: 40%;">
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
